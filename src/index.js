@@ -8,8 +8,8 @@ dotenv.config();
 const PR_BOT_TOKEN = process.env.PR_BOT_TOKEN;
 // const GROUP_ID = -1002472603673;
 // const TOPIC_ID = 193;
-const GROUP_ID = process.env.GROUP_ID;
-const TOPIC_ID = process.env.TOPIC_ID;
+const GROUP_ID = -1002162367846;
+const TOPIC_ID = 5235;
 const TIMEZONE = "Asia/Kolkata";
 const bot = new TelegramBot(PR_BOT_TOKEN, { polling: true });
 
@@ -103,7 +103,7 @@ bot.onText(/\/list/, (msg) => {
   }
 });
 cron.schedule(
-  "*/30 * * * * *",
+  "0 0 * * *",
   () => {
     console.log(
       `-------------Checking updates at: ${moment()
